@@ -99,19 +99,19 @@
 				    <img class="project-thumb mb-3 mb-md-0 mr-md-5 d-none d-md-inline-block" src="../assets/images/project/project-1.jpg" alt="">
 					<div class="media-body">
 					    <div class="client-info">
-						    <h3 class="client-name font-weight-bold mb-4">School Thesis</h3>
+							<h3 class="client-name font-weight-bold mb-4">School Thesis</h3>
 						    <ul class="client-meta list-unstyled">
-							    <!-- <li class="mb-2"><i class="fas fa-industry fa-fw mr-2"></i><strong>Industry:</strong> Tech</li> -->
-							    <!-- <li class="mb-2"><i class="fas fa-users fa-fw mr-2"></i><strong>Size:</strong> 100+</li> -->
 							    <li class="mb-2"><strong><i class="fas fa-link fa-fw mr-2"></i>Web app:</strong> <a class="theme-link" href="https://dustbin-iot.herokuapp.com/">dustbin-iot.com</a></li>
 							    
 						    </ul>
 						    <div class="client-bio mb-4">
 								This project was conceived as a thesis for the biennial ITS course: "Superior Technician for Smart City & Clean Energy Management".
 								It's an intelligent system for managing the refuse collection of a Smart City,
-								a fully functional web application written in Python / Django and deployed in Heroku. 
-								As database it uses Postgresql leaning on the Django ORM. And Javascript, HTML and CSS for the frontend.</div>
-						    <h4 class="subheading mb-3">Project Requirements</h4>
+								a scalable web application written in Python / Django and deployed in Heroku. 
+								As database it uses Postgresql leaning on the Django ORM. And Javascript, HTML, CSS for the frontend.
+							</div>
+							<div class="mb-4">
+							<h4 class="subheading mb-3" id="requirements">Project Requirements</h4>
 							<ul class="mb-0">
 							    <li class="mb-2">Use high resolution sensors.</li>
 							    <li class="mb-2">Ensure energy consumption efficiency of embedded devices.</li>
@@ -123,10 +123,16 @@
 							    <li class="mb-2">Ensure communications encryption.</li>
 							    <li class="mb-2">Ensure DB security (permissions and password encryption).</li>
 							</ul>
-							<br><small><a class="more-link" href="https://github.com/Ariel-MN/IoT"><i class="fas fa-external-link-alt"></i> Open source</a></small>
+							</div>
+							<div class="container single-col-max-width">
+								<a class="btn btn-primary" href="download/en/dustbin-iot-documentation.pdf" target="_blank"><i class="fas fa-file-pdf mr-2"></i>PDF Documentation</a>	
+							</div><!--//container-->
+
 					    </div>
 					</div><!--//media-body-->
+						<small><a class="more-link" href="https://github.com/Ariel-MN/IoT"><i class="fas fa-external-link-alt"></i> Open source</a></small>
 				</div><!--//project-meta-->
+				
 				<div class="project-sections py-5">
 					<div class="project-section mb-5">
 					    <h3 class="project-section-title mb-3">Project Overview</h3>
@@ -139,14 +145,15 @@
 					</div><!--//project-section-->
 					
 					<div class="project-section mb-5">
-					     <h3 class="project-section-title">The Challenge</h3>
-						 <p>As part of the IoT-A specifications, it's neccesary to develop a prototype that contributes to the development of a smart solution for the optimization of waste collection tasks.</p>
+					    <h3 class="project-section-title">The Challenge</h3>
+						<p>As part of the IoT-A specifications, it is necessary to develop a prototype that contributes to the development of an intelligent 
+							solution for the optimization of waste collection tasks, respecting the requirements outlined <a class="theme-link" href="#requirements">above</a>.</p>
+						<p>The data collected by the sensors of the waste bins must be delivered to the application database to allow them later display.</p>
 					</div><!--//project-section-->
 					
 					<div class="project-section mb-5">
 					    <h3 class="project-section-title">The Approach &amp; Solution</h3>
-						<p>This solution consists of a network of "sensor nodes" (ie embedded devices with detection sensor) positioned under each trash can of the city that communicate, through special gateways on the network, providing real-time data to a server. The data are also stored in a database with different authorization levels and can be consulted H24 via a web interface. Remote control of these nodes will also be allowed.</p>
-						<p>The Node-Red framework was used to create a conceptual <a class="theme-link" href="https://github.com/Ariel-MN/IoT/tree/prototype">prototype</a> prior to the true development of the <a class="theme-link" href="https://github.com/Ariel-MN/IoT/tree/master">web application</a> on the Django platform. The following video shows the result obtained in the first week.</p>
+						<p>As a first approach, the Node-Red framework was used to create a conceptual <a class="theme-link" href="https://github.com/Ariel-MN/IoT/tree/prototype">prototype</a> prior to the true development of the <a class="theme-link" href="https://github.com/Ariel-MN/IoT/tree/master">web application</a> on the Django platform. The following video shows the result obtained in the first week.</p>
 						<div class="col-12 col-lg-8 mb-5">
 							<div class="main-wrapper">
 								<div class="embed-responsive embed-responsive-16by9">
@@ -154,10 +161,28 @@
 								</div>
 							</div>
 						</div>
+
+						<p>The final solution is a network of "sensor nodes" (i.e. devices that incorporate a detection sensor) positioned under each 
+							city waste bin that communicate on the network through special gateways, providing real-time data to a server. The data are
+							also stored in a relational database with different levels of authorization and can be consulted H24 via a web interface.
+							and updates to this web app can be performed without interrupting the service. Remote control of the aforementioned nodes is also planned.</p>
 					
-						<p>The following image illustrates the main flow of the web application. Note that only the administrator has write permission.</p>
-						<img class="img-fluid" src="../assets/images/project/project-1-a.svg" alt="image">
+						<div class="mb-3">
+							<p>The following image illustrates the main flow of the web application. Note that only the administrator has write permission.</p>
+							<img class="img-fluid" src="../assets/images/project/project-1-a.svg" alt="image">
+						</div>	
 					
+						<p>The sensor data is sent via a computer (pc,
+							raspberry or arduino) with internet access and dedicated to recopilation, processing and sending of final 
+							information in JSON format to the database. All this is done by 
+							<a class="link-on-bg" href="https://github.com/Ariel-MN/IoT/tree/db-filler">db-filler</a> (another program
+							that I developed) which allow to perform these activities without compromising data integrity or database
+							security. In the security field, in addition to error management, it allows access to the database via a 
+							password which is requested from the first login or in case of computer restart.</p>
+							
+						<p>Before writing the new data the db-filler checks in database using queries. This allow to identify if a
+							sensor is new and it must be created a new instance or if it already exists and it must be updated.</p>
+
 					</div><!--//project-section-->
 
 					<div class="project-section mb-5">
@@ -182,8 +207,22 @@
 							</div><!--//row-->
 						</div><!--//metrics-->
 						
-						<p>The result is a fully functional web application that solves the customer's needs H24 a day for a price of less than €50 per each garbage basket. The final <a class="link-on-bg" href="https://dustbin-iot.herokuapp.com">product</a> that I have carried out is open source and is available <a class="link-on-bg" href="https://github.com/Ariel-MN/IoT/tree/master">online</a> as well as its <a class="link-on-bg" href="https://github.com/Ariel-MN/IoT/tree/prototype">prototype</a>.</p>
-						
+						<p>The result is a web application that solves the customer's needs H24 a day for a price of less than €50 per each garbage
+							basket. The final <a class="link-on-bg" href="https://dustbin-iot.herokuapp.com">product</a> that I have carried out is
+							open source and is available <a class="link-on-bg" href="https://github.com/Ariel-MN/IoT/tree/master">online</a> as well
+							as its <a class="link-on-bg" href="https://github.com/Ariel-MN/IoT/tree/prototype">prototype</a>.</p>
+						<p>Dustbin IoT project is scalable in integrating new features and allows this web application to progressively improve.
+							Below is a list of some of the features that could be implemented to improve this program.</p>
+							<ul>
+								<li>Automatic sending of emails or notifications to operators for communicates the assignment of a collection.</li>
+								<li>Auto generation of service orders based on following parameters: operators with less workload,
+									capacity of the baskets and suitable days for collection.</li>
+								<li>Calculation of the most efficient route to perform the collection e possibility to display it on a map with
+									access to GPS from the application.</li>
+								<li>Support in multiple languages for more understanding from part of the operators.</li>
+								<li>Tutorial on how to use the application at first access, repeatable if necessary.</li>
+								<li>Possibility to identify who is the responsible for the current day and if necessary contact him from the app.</li>
+							</ul>
 					</div><!--//project-section-->
 					
 					<div class="project-section mb-5">
