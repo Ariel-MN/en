@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi.</title>
+	
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi." />
+	<meta name="description" content="In this guide we will cover the deployment of a Django project in Apache using Windows 10 and the required compilation of the mod_wsgi module..." />
+	<meta property="og:url" content="https://www.montesariel.com/blog/post-3" />
+	<meta property="og:image" content="https://montesariel.com/assets/images/blog/post-3.jpg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    
+	<!-- Twitter Card -->
+	<meta property="twitter:account_id" content="1105607671053537280" />
+	<meta name="twitter:title" content="How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi." />
+    <meta name="twitter:description" content="In this guide we will cover the deployment of a Django project in Apache using Windows 10 and the required compilation of the mod_wsgi module..." />
+    <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@montes_dev" />
+	<meta name="twitter:creator" content="@montes_dev" />
+    <meta name="twitter:domain" content="https://www.montesariel.com/blog/post-3" />
+	<meta name="twitter:image:src" content="https://montesariel.com/assets/images/blog/post-3.jpg" />
+
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" />
+    
+    <!-- FontAwesome JS -->
+    <script defer src="../assets/fontawesome/js/all.js"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../assets/plugins/highlight/styles/monokai-sublime.css" />
+    
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css" />
+    
+
+</head> 
+
+<body>
+    
+    <header class="header text-center">
+		<div class="force-overflow">
+			<h1 class="blog-name pt-lg-4 mb-0"><a href="../">Ariel Montes</a></h1>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark" >
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navigation" class="collapse navbar-collapse flex-column" >
+					<div class="profile-section pt-3 pt-lg-0">
+						<img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/profile.png" alt="image" >		
+						
+						<div class="bio mb-3">Hi, my name is Ariel Montes and I'm a web app developer. Welcome to my personal website!</div><!--//bio-->
+						<ul class="social-list list-inline py-2 mx-auto">
+							<li class="list-inline-item"><a href="https://twitter.com/@montes_dev" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://linkedin.com/in/ariel-mn/en" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://github.com/ariel-mn" target="_blank"><i class="fab fa-github-alt fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://stackoverflow.com/story/ariel-mn" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.instagram.com/ariel_mn1/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+						<hr> 
+					</div><!--//profile-section-->
+					
+					<ul class="navbar-nav flex-column text-left">
+						<li class="nav-item">
+							<a class="nav-link" href="../"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../portfolio"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../resume"><i class="fas fa-file-alt fa-fw mr-2"></i>Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../blog"><i class="fas fa-blog fa-fw mr-2"></i>Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../contact"><i class="fas fa-envelope-open-text fa-fw mr-2"></i>Contact</a>
+						</li>
+				
+					</ul>
+			
+					<div class="dark-mode-toggle text-center w-100">
+						<hr class="mb-4">
+					    <h4 class="toggle-name mb-3 "><i class="fas fa-adjust mr-1"></i>Dark Mode</h4>
+					    
+					    <input class="toggle" id="darkmode" type="checkbox">
+					    <label class="toggle-btn mx-auto mb-0" for="darkmode"></label>
+					    
+					</div><!--//dark-mode-toggle-->
+				</div>
+			</nav>
+		</div><!--//force-overflow-->
+	</header>
+    
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi.</h2>
+				    <div class="meta mb-3"><span class="date">Published Jul 2020</span><span class="time">8 min read</span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <img class="img-fluid" src="../assets/images/blog/post-3.jpg" alt="image">
+				    </figure>
+					
+					<h3 class="mt-5 mb-3">Introduction</h3>
+					<p>In this guide we will cover the deployment of a Django project in Apache using Windows 10 and the required compilation of the mod_wsgi module.</p>
+					<h5 class="my-3">This article will take for granted:</h5>
+					<ul class="mb-5">
+						<li class="mb-2">You have a Windows computer ready with administrator permissions.</li>
+						<li class="mb-2">Basic knowledge of Python, pip package manager and virtualenv to create virtual environments.</li>
+						<li class="mb-2">You already have a Django project, as this article is not intended to explain the configuration or creation of a Django application.</li>
+						<li class="mb-2">You are familiar with the basic administration of Apache, as this tutorial will only cover the simple installation of the server itself and the configuration changes necessary to pair Django with Apache.</li>
+					</ul>
+
+					<h3 class="mt-5 mb-3">Prerequisites</h3>
+
+					<h5 class="mt-4 mb-3">Install Python</h5>
+					<p>For this guide we will use Python version 3.8.3, which can be downloaded <a target="_blank" href="https://www.python.org/downloads/">here</a>.</p>
+					<p>Be sure to install the corresponding one for your system based on its bits 64 or 32 (x86), you can find out the bits of your system by right-clicking on start and clicking on System, and reading the information under the device specifications.</p>
+					<p>In installation options select add python to PATH and install launcher for all users.</p>
+
+					<h5 class="mt-4 mb-3">Install Python Virtual Environment</h5>
+					<p class="mb-0">Create a python virtual environment in the main root of the Django project.</p>
+					<pre><code>virtualenv "D:\path\to\project-root\venv"</code></pre>
+
+					<h5 class="mt-4 mb-3">Install Apache</h5>
+					<p>We will use the Apache 2.4 version of the lounge page, downloadable from <a target="_blank" href="https://www.apachelounge.com/download/">here</a>.</p>
+					<p>Extract the ZIP file to the root of the <code>C:/</code> drive, so that this result is obtained <code>C:/Apache24</code>.</p>
+
+					<h5 class="mt-4 mb-3">Install Microsoft Build Tools</h5>
+					<p>In Windows it is necessary to compile the mod_wsgi module to be able to use it and for this it is necessary to have Microsoft Build Tools installed.</p>
+					<p>Installation requires about 4 gigabytes and you can download the installer <a target="_blank" href="https://visualstudio.microsoft.com/it/visual-cpp-build-tools/">here</a>.</p>
+					<figure>
+						<figcaption class="my-2 text-center image-caption">Screenshot of the configuration required during installation.</figcaption>
+				        <img class="img-fluid" src="../assets/images/blog/post-3-1.png" alt="image">
+					</figure>
+
+					<h5 class="mt-4 mb-3">Install mod_wsgi</h5>
+					<p>Installation of the mod_wsgi model and its configuration using Apache's WSGIDaemonProcess method available on Linux is not compatible with Windows. Windows expects mod_wsgi to be compiled using Microsoft Build Tools.</p>
+					<p>Because of this it is necessary to follow these steps from a CMD:</p>
+					<ul class="mb-5">
+						<li class="mb-2">
+							Set MOD_WSGI_APACHE_ROOTDIR as environment variable
+							<pre><code>set "MOD_WSGI_APACHE_ROOTDIR=C:\Apache24"</code></pre>
+						</li>
+						<li class="mb-2">
+							Activate python virtual environment
+							<pre><code>"D:path\to\project-root\venv\Scripts\activate"</code></pre>
+						</li>
+						<li class="mb-2">
+							Install mod_wsgi module into the virtual environment
+							<pre><code>pip install mod_wsgi</code></pre>
+						</li>
+						<li class="mb-2">
+							Copy the output to get the configuration required by Apache
+							<pre><code>mod_wsgi-express module-config</code></pre>
+						</li>
+						<li class="mb-2">
+							Install all the library dependencies of the Django project
+							<pre><code>pip install module-name</code></pre>
+							Or get a requirements file with <code>pip freeze > requirements.txt</code> and then install it with
+							<pre><code>pip install -r requirements.txt</code></pre>
+						</li>
+						<li class="mb-2">
+							Deactivate the virtual environment.
+							<pre><code>deactivate</code></pre>
+						</li>
+					</ul>
+			
+					<h3 class="mt-5 mb-3">Configuration</h3>
+
+				    <ul class="mb-5">
+						<li class="mb-2">
+							Edit the <strong>host</strong> file at <code>C:\Windows\System32\drivers\etc</code> by adding this line to the bottom <pre><code>127.0.0.2    www.app-name.com    app-name.com</code></pre>
+						</li>
+						<li class="mb-2">
+							Update the list of allowed hosts for the application in <strong>settings.py</strong>.
+							<pre><code>ALLOWED_HOSTS = ['www.app-name.com', 'app-name.com']</code></pre></code>
+						</li>
+						<li class="mb-2">
+							Update the Django project's <strong>wsgi.py</strong> file to look like the following.
+							<pre>
+<code>import os
+import sys
+from django.core.wsgi import get_wsgi_application
+from pathlib import Path
+
+# Add project directory to the sys.path
+path_home = str(Path(__file__).parents[1])
+if path_home not in sys.path:
+	sys.path.append(path_home)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'main.settings'
+
+application = get_wsgi_application()</code>
+							</pre>
+						</li>
+						<li class="mb-2">
+							Fix a Python bug that causes an error 500 every time a query is made to the database.<br>
+							Edit the <strong>__init__.py</strong> file in <code>project-root\venv\Lib\site-packages\asgiref</code> by adding the following.
+							<pre>
+<code># PATCH that fix a Python Bug:
+import sys
+import asyncio
+
+if sys.platform == "win32" and sys.version_info >= (3, 8, 0):
+	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())</code>
+							</pre>
+						</li>
+						<li class="mb-2">
+							Set up Apache by modifying the <strong>httpd.conf</strong> file at <code>C:\Apache24\conf</code>, adding at the end everything that follows but replacing the directories with those on your system.
+							<pre>
+<code>LoadFile "S:/path/to/project-root/venv/Scripts/python38.dll"
+LoadModule wsgi_module "S:/path/to/project-root/venv/lib/site-packages/mod_wsgi/server/mod_wsgi.cp38-win_amd64.pyd"
+WSGIPythonHome "C:/Users/User-name/AppData/Local/Programs/Python/Python38"
+WSGIPythonPath "S:/path/to/project-root/venv/Lib/site-packages"
+
+&ltVirtualHost *:80&gt
+ServerAlias www.app-name.com
+ServerName app-name.com
+ServerAdmin info@admin.com
+WSGIScriptAlias / "S:/path/to/project-root/project-name/wsgi.py"
+  &ltDirectory "S:/path/to/project-root/project-name"&gt
+    &ltFiles wsgi.py&gt
+      Require all granted
+    &lt/Files&gt
+  &lt/Directory&gt
+
+Alias /static/ "S:/path/to/project-root/static/"
+  &ltDirectory "S:/path/to/project-root/static"&gt
+    Require all granted
+  &lt/Directory&gt
+
+ErrorLog "S:/path/to/project-root/logs/apache.error.log"
+CustomLog "S:/path/to/project-root/logs/apache.custom.log" common
+&lt/VirtualHost&gt</code>
+							</pre>
+						</li>
+						<li class="mb-2">
+							Check the syntax of the apache configuration files.
+							<pre><code>"C:\Apache24\bin\httpd.exe" -t</code></pre>
+						</li>
+						<li class="mb-2">
+							Run the Apache server.
+							<pre><code>"C:\Apache24\bin\httpd.exe" -k start</code></pre>
+						</li>
+						<li class="mb-2">
+							Check the Django application from the browser by visiting <strong>app-name.com</strong>.
+						</li>
+						<li class="mb-2">
+							If any module is missing, it is recommended to use this command to make sure it is installed in the Python home given to Apache.
+							<pre><code>pip install --target="C:/Users/User-name/AppData/Local/Programs/Python/Python38" library-name</code></pre>
+						</li>
+					</ul>
+					<p>Congratulations, you have successfully deployed your application. In case you have had any problems, you can check the log files or leave a comment below and I will try to reply as soon as possible. Best regards.</p>
+			    </div>
+				
+				<h3 class="mt-5 mb-3">Opinions</h3>
+				
+				<blockquote class="twitter-tweet" data-conversation="none" data-lang="en" data-theme="light"><p lang="en" dir="ltr">Am surprised config works. Right now setting WSGIPythonHome with virtual environment breaks because of Python issue. That said, if can try with &#39;develop&#39; version of mod_wsgi off GitHub, it should work by setting WSGIPythonHome to virtualenv. Don&#39;t need site-packages hack in path.</p>&mdash; Graham Dumpleton (@GrahamDumpleton) <a href="https://twitter.com/GrahamDumpleton/status/1288684748223557632?ref_src=twsrc%5Etfw">July 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The issue is about 6 years old. No it will not, but finally have a workaround in mod_wsgi. It was only an issue for new style virtual env, but then virtualenv tool switched to those earlier this year so broke everything. Only affects Windows.</p>&mdash; Graham Dumpleton (@GrahamDumpleton) <a href="https://twitter.com/GrahamDumpleton/status/1288930429408382977?ref_src=twsrc%5Etfw">July 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="post-2">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <!-- <a class="nav-link-next nav-item nav-link rounded-right" href="blog-2">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a> -->
+				</nav>
+				
+				<div style="margin-bottom: 2em;">
+					<h6>Readers</h6>
+					<!--Web Counter-->
+					<div id="sfcf5e8d3n746xan95nnpk6ggyt8ahb1j7r"></div>
+					<script type="text/javascript" src="https://counter3.stat.ovh/private/counter.js?c=f5e8d3n746xan95nnpk6ggyt8ahb1j7r&down=async" async></script>
+					<noscript><a href="https://www.freecounterstat.com" target="_blank" title="hit counter"><img src="https://counter3.stat.ovh/private/freecounterstat.php?c=f5e8d3n746xan95nnpk6ggyt8ahb1j7r" border="0" title="hit counter" alt="hit counter"></a></noscript>
+				</div>
+				
+				<div class="blog-comments-section">
+
+					<div id="disqus_thread"></div>
+					<script>
+
+					    var disqus_config = function () {
+					        // Replace PAGE_URL with your page's canonical URL variable
+					        this.page.url = 'https://montesariel.com/post-3';
+					        
+					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					        this.page.identifier = PAGE_IDENTIFIER; 
+					    };
+					    
+					    
+					    (function() {
+					        var d = document, s = d.createElement('script');
+					        
+					        s.src = 'https://montes-dev.disqus.com/embed.js';
+					        
+					        s.setAttribute('data-timestamp', +new Date());
+					        (d.head || d.body).appendChild(s);
+					    })();
+					</script>
+					<noscript>
+					    Please enable JavaScript to view the 
+					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+					        comments powered by Disqus.
+					    </a>
+					</noscript>
+				</div><!--//blog-comments-section-->
+				
+		    </div><!--//container-->
+	    </article>
+
+    </div><!--//main-wrapper-->
+    
+    <!-- Javascript -->          
+    <script src="../assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="../assets/plugins/popper.min.js"></script> 
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/blog.js"></script>
+    
+    <!-- Dark Mode -->
+	<script src="../assets/plugins/js-cookie.min.js"></script>
+	<script src="../assets/js/dark-mode.js"></script>
+    
+</body>
+</html> 
+
