@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es"> 
 <head>
-    <title>How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi.</title>
+    <title>Cómo ejecutar Django en Apache usando Windows 10, Virtualenv Python y mod_wsgi.</title>
 	
     <!-- Meta -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta property="og:title" content="How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi." />
+	<meta property="og:title" content="Cómo ejecutar Django en Apache usando Windows 10, Virtualenv Python y mod_wsgi." />
 	<meta name="description" content="In this guide we will cover the deployment of a Django project in Apache using Windows 10 and the required compilation of the mod_wsgi module..." />
 	<meta property="og:url" content="https://www.montesariel.com/blog/post-3" />
 	<meta property="og:image" content="https://montesariel.com/assets/images/blog/post-3.jpg" />
@@ -15,7 +15,7 @@
     
 	<!-- Twitter Card -->
 	<meta property="twitter:account_id" content="1105607671053537280" />
-	<meta name="twitter:title" content="How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi." />
+	<meta name="twitter:title" content="Cómo ejecutar Django en Apache usando Windows 10, Virtualenv Python y mod_wsgi." />
     <meta name="twitter:description" content="In this guide we will cover the deployment of a Django project in Apache using Windows 10 and the required compilation of the mod_wsgi module..." />
     <meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@montes_dev" />
@@ -121,8 +121,8 @@
 
 		    <div class="container single-col-max-width pb-5">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">How to run Django on Apache using Windows 10, Virtualenv Python and mod_wsgi.</h2>
-				    <div class="meta mb-3"><span class="date">Published Jul 2020</span><span class="time">8 min read</span></div>
+				    <h2 class="title mb-2">Cómo ejecutar Django en Apache usando Windows 10, Virtualenv Python y mod_wsgi.</h2>
+				    <div class="meta mb-3"><span class="date">Publicado Julio 2020</span><span class="time">8 min de lectura</span></div>
 			    </header>
 			    
 			    <div class="blog-post-body">
@@ -130,83 +130,83 @@
 				        <img class="img-fluid" src="../../assets/images/blog/post-3.jpg" alt="image">
 				    </figure>
 					
-					<h3 class="mt-5 mb-3">Introduction</h3>
-					<p>In this guide we will cover the deployment of a Django project in Apache using Windows 10 and the required compilation of the mod_wsgi module.</p>
-					<h5 class="my-3">This article will take for granted:</h5>
+					<h3 class="mt-5 mb-3">Introducción</h3>
+					<p>En esta guía cubriremos la implementación de un proyecto de Django en Apache usando Windows 10 y la compilación requerida del módulo mod_wsgi.</p>
+					<h5 class="my-3">Este artículo dará por sentado:</h5>
 					<ul class="mb-5">
-						<li class="mb-2">You have a Windows computer ready with administrator permissions.</li>
-						<li class="mb-2">Basic knowledge of Python, pip package manager and virtualenv to create virtual environments.</li>
-						<li class="mb-2">You already have a Django project, as this article is not intended to explain the configuration or creation of a Django application.</li>
-						<li class="mb-2">You are familiar with the basic administration of Apache, as this tutorial will only cover the simple installation of the server itself and the configuration changes necessary to pair Django with Apache.</li>
+						<li class="mb-2">Que dispone de una computadora con Windows y permisos de administrador.</li>
+						<li class="mb-2">Tiene conocimientos básicos de Python, pip package manager y virtualenv para crear entornos virtuales.</li>
+						<li class="mb-2">Cuenta con un proyecto Django, ya que este artículo no pretende explicar la configuración o creación de una aplicación Django.</li>
+						<li class="mb-2">Está familiarizado con la administración básica de Apache, ya que este tutorial solo cubrirá la instalación simple del servidor y los cambios de configuración necesarios para emparejar Django con Apache.</li>
 					</ul>
 
-					<h3 class="mt-5 mb-3">Prerequisites</h3>
+					<h3 class="mt-5 mb-3">Prerrequisitos</h3>
 
-					<h5 class="mt-4 mb-3">Install Python</h5>
-					<p>For this guide we will use Python version 3.8.3, which can be downloaded <a target="_blank" href="https://www.python.org/downloads/">here</a>.</p>
-					<p>Be sure to install the corresponding one for your system based on its bits 64 or 32 (x86), you can find out the bits of your system by right-clicking on start and clicking on System, and reading the information under the device specifications.</p>
-					<p>In installation options select add python to PATH and install launcher for all users.</p>
+					<h5 class="mt-4 mb-3">Instalar Python</h5>
+					<p>Para esta guía usaremos Python versión 3.8.3, que puede descargar <a target="_blank" href="https://www.python.org/downloads/">aquí</a>.</p>
+					<p>Asegúrese de instalar el correspondiente para su sistema según los bits 64 o 32 (x86), puede averiguar los bits de su sistema haciendo clic derecho en Inicio, luego en Sistema, y leyendo la información bajo las especificaciones del dispositivo.</p>
+					<p>En las opciones de instalación, seleccione agregar Python a PATH e instalar el launcher para todos los usuarios.</p>
 
-					<h5 class="mt-4 mb-3">Install Python Virtual Environment</h5>
-					<p class="mb-0">Create a python virtual environment in the main root of the Django project.</p>
+					<h5 class="mt-4 mb-3">Instalar el entorno virtual de Python</h5>
+					<p class="mb-0">Cree un entorno virtual de Python en la raíz principal del proyecto Django.</p>
 					<pre><code>virtualenv "D:\path\to\project-root\venv"</code></pre>
 
-					<h5 class="mt-4 mb-3">Install Apache</h5>
-					<p>We will use the Apache 2.4 version of the lounge page, downloadable from <a target="_blank" href="https://www.apachelounge.com/download/">here</a>.</p>
-					<p>Extract the ZIP file to the root of the <code>C:/</code> drive, so that this result is obtained <code>C:/Apache24</code>.</p>
+					<h5 class="mt-4 mb-3">Instalar Apache</h5>
+					<p>Usaremos la versión Apache 2.4 de la página del lounge, descargable desde <a target="_blank" href="https://www.apachelounge.com/download/">aquí</a>.</p>
+					<p>Extraiga el archivo ZIP a la raíz del disco <code>C:/</code>, de modo que obtenga este resultado <code>C:/Apache24</code>.</p>
 
-					<h5 class="mt-4 mb-3">Install Microsoft Build Tools</h5>
-					<p>In Windows it is necessary to compile the mod_wsgi module to be able to use it and for this it is necessary to have Microsoft Build Tools installed.</p>
-					<p>Installation requires about 4 gigabytes and you can download the installer <a target="_blank" href="https://visualstudio.microsoft.com/it/visual-cpp-build-tools/">here</a>.</p>
+					<h5 class="mt-4 mb-3">Instalar Microsoft Build Tools</h5>
+					<p>En Windows es necesario compilar el módulo mod_wsgi para poder utilizarlo y para ello es necesario tener instalado Microsoft Build Tools.</p>
+					<p>La instalación requiere aproximadamente 4 gigabytes y puede descargar el instalador <a target="_blank" href="https://visualstudio.microsoft.com/it/visual-cpp-build-tools/">aquí</a>.</p>
 					<figure>
-						<figcaption class="my-2 text-center image-caption">Screenshot of the configuration required during installation.</figcaption>
+						<figcaption class="my-2 text-center image-caption">Screenshot de la configuración requerida durante la instalación.</figcaption>
 				        <img class="img-fluid" src="../../assets/images/blog/post-3-1.png" alt="image">
 					</figure>
 
-					<h5 class="mt-4 mb-3">Install mod_wsgi</h5>
-					<p>Installation of the mod_wsgi model and its configuration using Apache's WSGIDaemonProcess method available on Linux is not compatible with Windows. Windows expects mod_wsgi to be compiled using Microsoft Build Tools.</p>
-					<p>Because of this it is necessary to follow these steps from a CMD:</p>
+					<h5 class="mt-4 mb-3">Instalar mod_wsgi</h5>
+					<p>La instalación del modelo mod_wsgi y su configuración utilizando el método WSGIDaemonProcess de Apache disponible en Linux no es compatible con Windows. Windows espera que mod_wsgi se compile utilizando Microsoft Build Tools.</p>
+					<p>Por eso es necesario seguir estos pasos desde el CMD:</p>
 					<ul class="mb-5">
 						<li class="mb-2">
-							Set MOD_WSGI_APACHE_ROOTDIR as environment variable
+							Establecer MOD_WSGI_APACHE_ROOTDIR como variable del environment
 							<pre><code>set "MOD_WSGI_APACHE_ROOTDIR=C:\Apache24"</code></pre>
 						</li>
 						<li class="mb-2">
-							Activate python virtual environment
+							Activar el entorno virtual de Python
 							<pre><code>"D:path\to\project-root\venv\Scripts\activate"</code></pre>
 						</li>
 						<li class="mb-2">
-							Install mod_wsgi module into the virtual environment
+							Instale el módulo mod_wsgi en el entorno virtual
 							<pre><code>pip install mod_wsgi</code></pre>
 						</li>
 						<li class="mb-2">
-							Copy the output to get the configuration required by Apache
+							Copie el output para obtener la configuración requerida por Apache
 							<pre><code>mod_wsgi-express module-config</code></pre>
 						</li>
 						<li class="mb-2">
-							Install all the library dependencies of the Django project
+							Instale todas las dependencias de la librería del proyecto Django
 							<pre><code>pip install module-name</code></pre>
-							Or get a requirements file with <code>pip freeze > requirements.txt</code> and then install it with
+							U obtenga un archivo de requisitos con <code>pip freeze > requirements.txt</code> y luego instalelo con
 							<pre><code>pip install -r requirements.txt</code></pre>
 						</li>
 						<li class="mb-2">
-							Deactivate the virtual environment.
+							Desactive el entorno virtual.
 							<pre><code>deactivate</code></pre>
 						</li>
 					</ul>
 			
-					<h3 class="mt-5 mb-3">Configuration</h3>
+					<h3 class="mt-5 mb-3">Configuración</h3>
 
 				    <ul class="mb-5">
 						<li class="mb-2">
-							Edit the <strong>host</strong> file at <code>C:\Windows\System32\drivers\etc</code> by adding this line to the bottom <pre><code>127.0.0.2    www.app-name.com    app-name.com</code></pre>
+							Edite el archivo <strong>host</strong> en <code>C:\Windows\System32\drivers\etc</code> agregando esta línea al final <pre><code>127.0.0.2    www.app-name.com    app-name.com</code></pre>
 						</li>
 						<li class="mb-2">
-							Update the list of allowed hosts for the application in <strong>settings.py</strong>.
+							Actualice la lista de hosts permitidos para la aplicación en <strong>settings.py</strong>.
 							<pre><code>ALLOWED_HOSTS = ['www.app-name.com', 'app-name.com']</code></pre></code>
 						</li>
 						<li class="mb-2">
-							Update the Django project's <strong>wsgi.py</strong> file to look like the following.
+							Actualice el archivo <strong>wsgi.py</strong> del proyecto Django de la siguiente manera.
 							<pre>
 <code>import os
 import sys
@@ -224,8 +224,8 @@ application = get_wsgi_application()</code>
 							</pre>
 						</li>
 						<li class="mb-2">
-							Fix a Python bug that causes an error 500 every time a query is made to the database.<br>
-							Edit the <strong>__init__.py</strong> file in <code>project-root\venv\Lib\site-packages\asgiref</code> by adding the following.
+							Soluciona un bug de Python que causa un error 500 cada vez que se realiza una consulta a la base de datos.<br>
+							Edite el archivo <strong>__init__.py</strong> en <code>project-root\venv\Lib\site-packages\asgiref</code> agregando lo siguiente.
 							<pre>
 <code># PATCH that fix a Python Bug:
 import sys
@@ -236,7 +236,7 @@ if sys.platform == "win32" and sys.version_info >= (3, 8, 0):
 							</pre>
 						</li>
 						<li class="mb-2">
-							Set up Apache by modifying the <strong>httpd.conf</strong> file at <code>C:\Apache24\conf</code>, adding at the end everything that follows but replacing the directories with those on your system.
+							Configure Apache modificando el archivo <strong>httpd.conf</strong> en <code>C:\Apache24\conf</code>, agregando al final todo lo que sigue, pero reemplazando los directorios con los de su sistema.
 							<pre>
 <code>LoadFile "S:/path/to/project-root/venv/Scripts/python38.dll"
 LoadModule wsgi_module "S:/path/to/project-root/venv/lib/site-packages/mod_wsgi/server/mod_wsgi.cp38-win_amd64.pyd"
@@ -265,36 +265,36 @@ CustomLog "S:/path/to/project-root/logs/apache.custom.log" common
 							</pre>
 						</li>
 						<li class="mb-2">
-							Check the syntax of the apache configuration files.
+							Verifique la sintaxis de los archivos de configuración de apache.
 							<pre><code>"C:\Apache24\bin\httpd.exe" -t</code></pre>
 						</li>
 						<li class="mb-2">
-							Run the Apache server.
+							Ejecute el servidor Apache.
 							<pre><code>"C:\Apache24\bin\httpd.exe" -k start</code></pre>
 						</li>
 						<li class="mb-2">
-							Check the Django application from the browser by visiting <strong>app-name.com</strong>.
+							Verifique la aplicación Django desde el navegador visitando <strong>app-name.com</strong>.
 						</li>
 						<li class="mb-2">
-							If any module is missing, it is recommended to use this command to make sure it is installed in the Python home given to Apache.
+							Si falta algún módulo, se recomienda usar este comando para asegurarse de que esté instalado en la Python Home configurada en Apache.
 							<pre><code>pip install --target="C:/Users/User-name/AppData/Local/Programs/Python/Python38" library-name</code></pre>
 						</li>
 					</ul>
-					<p>Congratulations, you have successfully deployed your application. In case you have had any problems, you can check the log files or leave a comment below and I will try to reply as soon as possible. Best regards.</p>
+					<p>Felicitaciones, ha efectuado con éxito el deploy de su aplicación. En caso de que haya tenido algún problema, puede consultar los archivos de log o dejar un comentario a continuación e intentaré responderle lo antes posible. Atentamente.</p>
 			    </div>
 				
-				<h3 class="mt-5 mb-3">Opinions</h3>
+				<h3 class="mt-5 mb-3">Opiniones</h3>
 				
 				<blockquote class="twitter-tweet" data-conversation="none" data-lang="en" data-theme="light"><p lang="en" dir="ltr">Am surprised config works. Right now setting WSGIPythonHome with virtual environment breaks because of Python issue. That said, if can try with &#39;develop&#39; version of mod_wsgi off GitHub, it should work by setting WSGIPythonHome to virtualenv. Don&#39;t need site-packages hack in path.</p>&mdash; Graham Dumpleton (@GrahamDumpleton) <a href="https://twitter.com/GrahamDumpleton/status/1288684748223557632?ref_src=twsrc%5Etfw">July 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The issue is about 6 years old. No it will not, but finally have a workaround in mod_wsgi. It was only an issue for new style virtual env, but then virtualenv tool switched to those earlier this year so broke everything. Only affects Windows.</p>&mdash; Graham Dumpleton (@GrahamDumpleton) <a href="https://twitter.com/GrahamDumpleton/status/1288930429408382977?ref_src=twsrc%5Etfw">July 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="post-2">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <!-- <a class="nav-link-next nav-item nav-link rounded-right" href="blog-2">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a> -->
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="post-2">Anterior<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <!-- <a class="nav-link-next nav-item nav-link rounded-right" href="blog-2">Siguiente<i class="arrow-next fas fa-long-arrow-alt-right"></i></a> -->
 				</nav>
 				
 				<div style="margin-bottom: 2em;">
-					<h6>Readers</h6>
+					<h6>Lectores</h6>
 					<!--Web Counter-->
 					<div id="sfcf5e8d3n746xan95nnpk6ggyt8ahb1j7r"></div>
 					<script type="text/javascript" src="https://counter3.stat.ovh/private/counter.js?c=f5e8d3n746xan95nnpk6ggyt8ahb1j7r&down=async" async></script>
