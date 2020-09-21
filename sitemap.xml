@@ -6,62 +6,175 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+<!-- English -->
 <url>
   <loc>https://montesariel.com/</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://montesariel.com/portfolio</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.95</priority>
 </url>
 <url>
   <loc>https://montesariel.com/resume</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.95</priority>
 </url>
 <url>
   <loc>https://montesariel.com/blog</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.95</priority>
 </url>
 <url>
   <loc>https://montesariel.com/contact</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.95</priority>
 </url>
 <url>
   <loc>https://montesariel.com/portfolio/project-1</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
 </url>
 <url>
   <loc>https://montesariel.com/portfolio/project-2</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
 </url>
 <url>
   <loc>https://montesariel.com/portfolio/project-3</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://montesariel.com/blog/post-3</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://montesariel.com/blog/post-2</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
 </url>
 <url>
   <loc>https://montesariel.com/blog/post-1</loc>
-  <lastmod>2020-07-31T20:03:58+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/blog/post-2</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/blog/post-3</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
 </url>
 
+<!-- Spanish -->
+<url>
+  <loc>https://montesariel.com/es/</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/portfolio</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/resumen</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/blog</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/contactos</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/portfolio/project-1</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/portfolio/project-2</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/portfolio/project-3</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/blog/post-1</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/blog/post-2</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/es/blog/post-3</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<!-- Italian -->
+<url>
+  <loc>https://montesariel.com/it/</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/portfolio</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/resume</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/blog</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/contatti</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/portfolio/project-1</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/portfolio/project-2</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/portfolio/project-3</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/blog/post-1</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/blog/post-2</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/blog/post-3</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
 
 </urlset>
