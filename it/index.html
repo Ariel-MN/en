@@ -158,6 +158,9 @@
 						<div class="mb-3">
 							<a class="btn btn-primary mr-2 mb-3" href="portfolio"><i class="fas fa-arrow-alt-circle-right mr-2"></i> Portfolio</a>
 							<a class="btn btn-secondary mb-3" href="resume"><i class="fas fa-file-alt mr-2"></i> Curriculum</a>
+							<div>
+								<img id="visits" class="rounded non-focusable" src="https://docs.google.com/spreadsheets/d/1R-imuIhVnWkgKXu_7-i4FO9WJnCfl2thYSUqsqCwPS0/embed/oimg?id=1R-imuIhVnWkgKXu_7-i4FO9WJnCfl2thYSUqsqCwPS0&oid=880906165&disposition=ATTACHMENT&bo=false&filetype=svg" alt="Visits" tabindex="0" data-toggle="popover" data-trigger="focus" title="Statistiche del sito web" data-content="Altri dettagli sono disponibili <a href='../stats'>qui</a>">
+							</div>
 						</div>
 					</div><!--//media-body-->
 					<img class="profile-image mb-3 mb-lg-0 mt-lg-4 ml-lg-5 mr-md-0" src="../assets/images/logo-lg.svg" alt="Company Logo"/>
@@ -492,6 +495,13 @@
 	<!-- Dark Mode -->
 	<script src="../assets/plugins/js-cookie.min.js"></script>
 	<script src="../assets/js/dark-mode.js"></script>
+
+	<!-- Activate popover -->
+	<script>
+        $(function () {
+            $('[data-toggle="popover"]').popover({delay:{hide:100}, html:true})
+        })
+	</script>
 
 </body>
 </html>
