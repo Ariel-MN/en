@@ -25,7 +25,10 @@
 	<meta name="twitter:creator" content="@montes_dev" />
     <meta name="twitter:domain" content="https://www.montesariel.com" />
 	<meta name="twitter:image:src" content="https://montesariel.com/assets/images/twitter.png" />
-		
+	
+	<!-- Loading CSS -->
+	<link rel="stylesheet" href="assets/plugins/loading/loading.css" />
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3872FPZ8CN"></script>
 	<script>
@@ -55,6 +58,8 @@
 
 <body>
 	
+	<div id="loading"><span id="loader"></span></div>
+
 	<header class="header text-center">	    
 		<div class="force-overflow">
 
@@ -242,6 +247,14 @@
 							<div class="item-icon"><i class="fab fa-git-alt mr-2"></i><i class="fab fa-github"></i></div>
 							<h3 class="item-title">Git &amp; GitHub</h3>
 							<div class="item-desc">Version control system.</div>
+						</div><!--//item-inner-->
+					</div><!--//item-->
+
+					<div class="item col-6 col-lg-3">
+						<div class="item-inner">
+							<div class="item-icon"><i class="fas fa-database"></i></div>
+							<h3 class="item-title">SQL &amp; NoSQL</h3>
+							<div class="item-desc">Relational and non-relational database.</div>
 						</div><!--//item-inner-->
 					</div><!--//item-->
 
@@ -479,10 +492,8 @@
 
 	<!-- Javascript -->          
 	<script src="assets/plugins/jquery-3.4.1.min.js"></script>
-	<script src="assets/plugins/popper.min.js"></script> 
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>	
-
-
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/plugins/tiny-slider/min/tiny-slider.js"></script>
 	<script src="assets/js/testimonials.js"></script>
 
@@ -493,5 +504,8 @@
 	<script src="assets/plugins/js-cookie.min.js"></script>
 	<script src="assets/js/dark-mode.js"></script>
 
+	<!-- Loading -->
+	<script src="assets/plugins/loading/loading.js"></script>
+	
 </body>
 </html>
