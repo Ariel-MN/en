@@ -157,6 +157,11 @@
 						<div class="mb-3">
 							<a class="btn btn-primary mr-2 mb-3" href="portfolio"><i class="fas fa-arrow-alt-circle-right mr-2"></i><span class="d-none d-md-inline">View</span> Portfolio</a>
 							<a class="btn btn-secondary mb-3" href="resume"><i class="fas fa-file-alt mr-2"></i><span class="d-none d-md-inline">View</span> Resume</a>
+							<div>
+								<a tabindex="0" style="outline:none; transition-delay: 2s;" data-toggle="popover" data-trigger="focus" title="Statistics" data-content="View more details <a href='stats'>here</a>">
+									<img id="visits" class="rounded" src="https://docs.google.com/spreadsheets/d/1R-imuIhVnWkgKXu_7-i4FO9WJnCfl2thYSUqsqCwPS0/embed/oimg?id=1R-imuIhVnWkgKXu_7-i4FO9WJnCfl2thYSUqsqCwPS0&oid=880906165&disposition=ATTACHMENT&bo=false&filetype=svg" alt="Visits">
+								</a>
+							</div>
 						</div>
 					</div><!--//media-body-->
 					<img class="profile-image mb-3 mb-lg-0 mt-lg-4 ml-lg-5 mr-md-0" src="assets/images/logo-lg.svg" alt="Company Logo"/>
@@ -499,6 +504,13 @@
 	<!-- Dark Mode -->
 	<script src="assets/plugins/js-cookie.min.js"></script>
 	<script src="assets/js/dark-mode.js"></script>
+	
+	<!-- Activate popover -->
+	<script>
+        $(function () {
+            $('[data-toggle="popover"]').popover({delay:{hide:100}, html:true})
+        })
+	</script>
 	
 </body>
 </html>
