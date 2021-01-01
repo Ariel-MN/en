@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="500" height="500" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="500" height="500" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <defs>
-<linearGradient id="a" x1="8.4428" x2="4.5477" y1="2.3952" y2="7.8422" gradientTransform="matrix(4.564,0,0,4.5566,9.2367,9.2687)" gradientUnits="userSpaceOnUse">
+<linearGradient id="d" x1="8.4428" x2="4.5477" y1="2.3952" y2="7.8422" gradientTransform="matrix(4.564,0,0,4.5566,9.2367,9.2687)" gradientUnits="userSpaceOnUse">
 <stop stop-color="#5469c9" offset="0"/>
 <stop stop-color="#5469c9" stop-opacity="0" offset="1"/>
 </linearGradient>
-<linearGradient id="b" x1="60.147" x2="83.275" y1="55.208" y2="22.492" gradientTransform="matrix(1.0002 0 0 .99959 -39.935 -.85276)" gradientUnits="userSpaceOnUse">
+<linearGradient id="c" x1="60.147" x2="83.275" y1="55.208" y2="22.492" gradientTransform="matrix(1.0002 0 0 .99959 -39.935 -.85276)" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4155b1" offset="0"/>
 <stop stop-color="#b4b9d2" offset="1"/>
 </linearGradient>
@@ -20,8 +20,8 @@
 </rdf:RDF>
 </metadata>
 <g transform="matrix(3.4246 0 0 3.287 -31.646 -25.077)">
-<path d="m11.624 46.4 16.853-33.727 5.7463 12.747 2.2676-3.0616 9.2333 24.043z" fill="#fff" stroke="url(#b)" stroke-width="2.9474"/>
+<path d="m11.624 46.4 16.853-33.727 5.7463 12.747 2.2676-3.0616 9.2333 24.043z" fill="#fff" stroke="url(#c)" stroke-width="2.9474"/>
 <path d="m9.2401 47.874 19.189-27.927 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="#5469c9" stroke-width=".99969"/>
-<path d="m21.037 47.873 6.616-17.447-0.89905-0.70537 2.1006-2.2307-1.8462 0.44723 2.251-2.4795-0.83031-5.5103 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="url(#a)" stroke-width=".99969" style="mix-blend-mode:screen"/>
+<path d="m21.037 47.873 6.616-17.447-0.89905-0.70537 2.1006-2.2307-1.8462 0.44723 2.251-2.4795-0.83031-5.5103 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="url(#d)" stroke-width=".99969" style="mix-blend-mode:screen"/>
 </g>
 </svg>
