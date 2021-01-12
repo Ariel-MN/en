@@ -1,4 +1,4 @@
-hljs.configure({tabReplace: '    ', languages: ['bash', 'python', 'apache']});
+hljs.configure({tabReplace:'    ',languages:['bash','python','apache']});
 hljs.initHighlightingOnLoad();
 
 /*
