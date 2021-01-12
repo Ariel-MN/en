@@ -44,8 +44,7 @@
     
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css" />
-    
-
+	
 </head> 
 
 <body>
@@ -199,21 +198,21 @@
 						</li>
 						<li class="mb-2">
 							Install mod_wsgi module into the virtual environment
-							<pre><code>pip install mod_wsgi</code></pre>
+							<pre><code class="bash">pip install mod_wsgi</code></pre>
 						</li>
 						<li class="mb-2">
 							Copy the output to get the configuration required by Apache
-							<pre><code>mod_wsgi-express module-config</code></pre>
+							<pre><code class="bash">mod_wsgi-express module-config</code></pre>
 						</li>
 						<li class="mb-2">
 							Install all the library dependencies of the Django project
-							<pre><code>pip install module-name</code></pre>
+							<pre><code class="bash">pip install module-name</code></pre>
 							Or get a requirements file with <code>pip freeze > requirements.txt</code> and then install it with
-							<pre><code>pip install -r requirements.txt</code></pre>
+							<pre><code class="bash">pip install -r requirements.txt</code></pre>
 						</li>
 						<li class="mb-2">
 							Deactivate the virtual environment
-							<pre><code>deactivate</code></pre>
+							<pre><code class="bash">deactivate</code></pre>
 						</li>
 					</ul>
 			
@@ -229,8 +228,7 @@
 						</li>
 						<li class="mb-2">
 							Update the Django projects <strong>wsgi.py</strong> file to look like the following.
-							<pre>
-<code>import os
+<pre><code>import os
 import sys
 from django.core.wsgi import get_wsgi_application
 from pathlib import Path
@@ -242,25 +240,21 @@ if path_home not in sys.path:
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'main.settings'
 
-application = get_wsgi_application()</code>
-							</pre>
+application = get_wsgi_application()</code></pre>
 						</li>
 						<li class="mb-2">
 							Fix a Python bug that causes an error 500 every time a query is made to the database.<br>
 							Edit the <strong>__init__.py</strong> file in <code>project-root\venv\Lib\site-packages\asgiref</code> by adding the following.
-							<pre>
-<code># PATCH that fix a Python Bug:
+<pre><code># PATCH that fix a Python Bug:
 import sys
 import asyncio
 
 if sys.platform == "win32" and sys.version_info >= (3, 8, 0):
-	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())</code>
-							</pre>
+	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())</code></pre>
 						</li>
 						<li class="mb-2">
 							Set up Apache by modifying the <strong>httpd.conf</strong> file at <code>C:\Apache24\conf</code>, adding at the end everything that follows but replacing the directories with those on your system.
-							<pre>
-<code>LoadFile "S:/path/to/project-root/venv/Scripts/python38.dll"
+<pre><code>LoadFile "S:/path/to/project-root/venv/Scripts/python38.dll"
 LoadModule wsgi_module "S:/path/to/project-root/venv/lib/site-packages/mod_wsgi/server/mod_wsgi.cp38-win_amd64.pyd"
 WSGIPythonHome "C:/Users/User-name/AppData/Local/Programs/Python/Python38"
 WSGIPythonPath "S:/path/to/project-root/venv/Lib/site-packages"
@@ -283,8 +277,7 @@ Alias /static/ "S:/path/to/project-root/static/"
 
 ErrorLog "S:/path/to/project-root/logs/apache.error.log"
 CustomLog "S:/path/to/project-root/logs/apache.custom.log" common
-&lt/VirtualHost&gt</code>
-							</pre>
+&lt/VirtualHost&gt</code></pre>
 						</li>
 						<li class="mb-2">
 							Check the syntax of the apache configuration files.
@@ -367,5 +360,4 @@ CustomLog "S:/path/to/project-root/logs/apache.custom.log" common
 	<script src="../assets/js/dark-mode.js"></script>
     
 </body>
-</html> 
-
+</html>
