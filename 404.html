@@ -135,21 +135,31 @@ permalink: /404.html
   <!-- Dark Mode -->
 	<script src="assets/plugins/js-cookie.min.js"></script>
   <script>
-    $(document).ready(function() {
+    function docReady(fn) {
+      // see if DOM is already available
+      if (document.readyState === "complete" || document.readyState === "interactive") {
+          // call on next available tick
+          setTimeout(fn, 1);
+      } else {
+          document.addEventListener("DOMContentLoaded", fn);
+      }
+    }
+    docReady(function() {
       function setThemeFromCookie() {
-        // Check if the cookie is set 
+        // Check if the cookie is set
+        let body = document.getElementsByTagName('body')[0];
         if (typeof Cookies.get('mode') !== "undefined" ) {
-          $('body').addClass("dark-mode");
+          body.classList.add("dark-mode");
           console.log('Cookie: dark mode' );
         } else {
-          $('body').removeClass("dark-mode");
+          body.classList.remove("dark-mode");
           console.log('Cookie: light mode' );
         }
       }
       setThemeFromCookie();
-    });	
+    });
   </script>
-  
+
 </body>
 
 </html>
