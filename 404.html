@@ -4,55 +4,143 @@ permalink: /404.html
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content="text/html; charset=UTF-8">
-    <title>Page not found</title>
-    <style type="text/css" media="screen">
-      @media screen and(max-width:1199px){svg{width:100px!important;height:100px!important}#suggestions a{font-size:35px!important}h1{font-size:100px!important}p{font-size:40px!important}}
-      body{background-color:#f1f1f1;margin:0;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
-      .container{margin:50px auto 40px auto;width:600px;text-align:center}
-      a{color:#4183c4;text-decoration:none}
-      a:hover{text-decoration:underline}
-      h1{width:800px;position:relative;left:-100px;letter-spacing:-1px;line-height:60px;font-size:60px;font-weight:100;margin:0 0 50px 0;text-shadow:0 1px 0 #fff}
-      p{color:rgba(0,0,0,.5);margin:20px 0;line-height:1.6}
-      ul{list-style:none;margin:25px 0;padding:0}
-      li{display:table-cell;font-weight:bold;width:1%}
-      .logo{display:inline-block;margin-top:35px}
-      #suggestions{margin-top:35px;color:#ccc}
-      #suggestions a{color:#666666;font-weight:200;font-size:14px;margin:0 10px}
-      svg{width:32;height:32}
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>404</h1>
-      <p><strong>File not found</strong></p>
-      <p>
-        The site configured at this address does not
-        contain the requested file.
-      </p>
-      <div id="suggestions">
-        <a href="https://montesariel.com">montesariel.com</a>
-      </div>
-      <a href="https://montesariel.com/" class="logo logo-img">
-        <svg width="150" height="150" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-          <defs>
-            <linearGradient id="a" x1="60.1" x2="83.2" y1="55.2" y2="22.4" gradientTransform="translate(-40 -.8)" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#4155b1" offset="0"/>
-              <stop stop-color="#b4b9d2" offset="1"/>
-            </linearGradient>
-            <linearGradient id="b" x1="8.4" x2="4.5" y1="2.3" y2="7.8" gradientTransform="matrix(4.5,0,0,4.5,9.2,9.2)" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#5469c9" offset="0"/>
-              <stop stop-color="#5469c9" stop-opacity="0" offset="1"/>
-            </linearGradient>
-          </defs>
-          <g transform="matrix(3.4245 0 0 3.4247 -31.642 -31.67)">
-            <path d="m11.624 46.4 16.853-33.727 5.7463 12.747 2.2676-3.0616 9.2333 24.043z" fill="#fff" stroke="url(#a)" stroke-width="2.94"/>
-            <path d="m9.2401 47.874 19.189-27.927 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="#5469c9"/>
-            <path d="m21.037 47.873 6.616-17.447-0.89905-0.70537 2.1006-2.2307-1.8462 0.44723 2.251-2.4795-0.83031-5.5103 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="url(#b)" style="mix-blend-mode:screen"/>
-          </g>
-        </svg>
-      </a>
-    </div><!--//container-->
-  </body>
+
+<head>
+  <meta content="text/html; charset=UTF-8">
+  <title>Page not found</title>
+  <style>
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+      svg {
+        width: 100px !important;
+        height: 100px !important
+      }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      svg {
+        width: 150px !important;
+        height: 150px !important
+      }
+    }
+
+    @media screen and (max-width:1199px) {
+      
+      #suggestion a {
+        font-size: 35px !important
+      }
+
+      h1 {
+        font-size: 100px !important
+      }
+
+      p {
+        font-size: 40px !important
+      }
+
+    }
+
+    body {
+      background-color: #f1f1f1;
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+
+    .container {
+      margin: 50px auto 40px auto;
+      max-width: 600px;
+      text-align: center
+    }
+
+    a {
+      color: #4183c4;
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: underline
+    }
+
+    h1 {
+      width: 800px;
+      position: relative;
+      left: -100px;
+      letter-spacing: -1px;
+      line-height: 60px;
+      font-size: 60px;
+      font-weight: 100;
+      margin: 0 0 50px 0;
+      text-shadow: 0 1px 0 #fff
+    }
+
+    p {
+      color: rgba(0, 0, 0, .5);
+      margin: 20px 0;
+      line-height: 1.6
+    }
+
+    .logo {
+      display: inline-block;
+      margin-top: 35px
+    }
+
+    #suggestion {
+      margin-top: 35px;
+      color: #ccc
+    }
+
+    #suggestion a {
+      color: #666666;
+      font-weight: 200;
+      font-size: 14px;
+      margin: 0 10px
+    }
+
+    svg {
+      width: 32;
+      height: 32
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <p><strong>File not found</strong></p>
+    <p>
+      The site configured at this address does not
+      contain the requested file.
+    </p>
+    <div id="suggestion">
+      <a href="https://montesariel.com">montesariel.com</a>
+    </div>
+    <a href="https://montesariel.com/" class="logo">
+      <svg width="32" height="32" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <defs>
+          <linearGradient id="a" x1="60.1" x2="83.2" y1="55.2" y2="22.4" gradientTransform="translate(-40 -.8)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#4155b1" offset="0" />
+            <stop stop-color="#b4b9d2" offset="1" />
+          </linearGradient>
+          <linearGradient id="b" x1="8.4" x2="4.5" y1="2.3" y2="7.8" gradientTransform="matrix(4.5,0,0,4.5,9.2,9.2)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#5469c9" offset="0" />
+            <stop stop-color="#5469c9" stop-opacity="0" offset="1" />
+          </linearGradient>
+        </defs>
+        <g transform="matrix(3.4245 0 0 3.4247 -31.642 -31.67)">
+          <path d="m11.624 46.4 16.853-33.727 5.7463 12.747 2.2676-3.0616 9.2333 24.043z" fill="#fff" stroke="url(#a)" stroke-width="2.94" />
+          <path d="m9.2401 47.874 19.189-27.927 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="#5469c9" />
+          <path d="m21.037 47.873 6.616-17.447-0.89905-0.70537 2.1006-2.2307-1.8462 0.44723 2.251-2.4795-0.83031-5.5103 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="url(#b)" style="mix-blend-mode:screen" />
+        </g>
+      </svg>
+    </a><!--//logo-->
+  </div><!--//container-->
+
+  <!-- Dark Mode -->
+	<script src="assets/plugins/js-cookie.min.js"></script>
+  <script src="assets/js/dark-mode.js"></script>
+  
+</body>
+
 </html>
