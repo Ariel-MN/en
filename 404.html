@@ -8,96 +8,27 @@ permalink: /404.html
 <head>
   <meta content="text/html; charset=UTF-8">
   <title>Page not found</title>
-
   <style>
     /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {
-      svg {
-        width: 100px !important;
-        height: 100px !important
-      }
-    }
-
+    @media(min-width:576px){svg{width:100px!important;height:100px!important}}
     /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-      svg {
-        width: 150px !important;
-        height: 150px !important
-      }
-    }
-
+    @media(min-width:992px){svg{width:150px!important;height:150px!important}}
     /* Extra large devices (large desktops, 1200px and up) */
-    @media (max-width:1200px) {
-      
-      #suggestion a {
-        font-size: 35px !important
-      }
+    @media(max-width:1200px){#suggestion a{font-size:35px!important}h1{font-size:100px!important}p{font-size:40px!important}}
 
-      h1 {
-        font-size: 100px !important
-      }
+    body{background-color:#f1f1f1;margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+    .container{margin:50px auto 40px auto;max-width:700px;text-align:center}
+    a{text-decoration:none}
+    a:hover{text-decoration:underline}
+    h1{letter-spacing:-1px;line-height:60px;font-size:60px;font-weight:100;text-shadow:0 1px 0 #fff}
+    p{color:#00000080;margin:20px 0;line-height:1.6}
+    .logo{display:inline-block;margin-top:35px}
+    #suggestion a{margin-top:35px;color:#666666;font-weight:200;font-size:14px;margin:0 10px}
 
-      p {
-        font-size: 40px !important
-      }
-
-    }
-
-    body {
-      background-color: #f1f1f1;
-      margin: 0;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-    }
-
-    .container {
-      margin: 50px auto 40px auto;
-      max-width: 700px;
-      text-align: center
-    }
-
-    a {
-      text-decoration: none
-    }
-
-    a:hover {
-      text-decoration: underline
-    }
-
-    h1 {
-      letter-spacing: -1px;
-      line-height: 60px;
-      font-size: 60px;
-      font-weight: 100;
-      text-shadow: 0 1px 0 #fff
-    }
-
-    p {
-      color: #00000080;
-      margin: 20px 0;
-      line-height: 1.6
-    }
-
-    .logo {
-      display: inline-block;
-      margin-top: 35px
-    }
-
-    #suggestion a {
-      margin-top: 35px;
-      color: #666666;
-      font-weight: 200;
-      font-size: 14px;
-      margin: 0 10px
-    }
-    
-    body.dark-mode {
-      background-color: #151e29;
-    }
-    .dark-mode p, .dark-mode #suggestion a, .dark-mode h1 {
-      color: #fff
-    }
+    /*Dark-mode*/
+    body.dark-mode{background-color:#151e29}
+    .dark-mode p,.dark-mode #suggestion a,.dark-mode h1{color:#fff}
   </style>
-
 </head>
 
 <body>
@@ -135,6 +66,7 @@ permalink: /404.html
   <!-- Dark Mode -->
 	<script src="assets/plugins/js-cookie.min.js"></script>
   <script>
+    // No jquery & No toggle
     function docReady(fn) {
       // see if DOM is already available
       if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -161,5 +93,4 @@ permalink: /404.html
   </script>
 
 </body>
-
 </html>
