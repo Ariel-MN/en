@@ -9,11 +9,7 @@ permalink: /404.html
   <meta content="text/html; charset=UTF-8">
   <title>Page not found</title>
 
-  <!-- Theme CSS -->
-  <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
-
   <style>
-
     /* Small devices (landscape phones, 576px and up) */
     @media (min-width: 576px) {
       svg {
@@ -30,8 +26,8 @@ permalink: /404.html
       }
     }
 
-    /*
-    @media screen and (max-width:1199px) {
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (max-width:1200px) {
       
       #suggestion a {
         font-size: 35px !important
@@ -55,12 +51,11 @@ permalink: /404.html
 
     .container {
       margin: 50px auto 40px auto;
-      max-width: 600px;
+      max-width: 700px;
       text-align: center
     }
 
     a {
-      color: #4183c4;
       text-decoration: none
     }
 
@@ -69,19 +64,15 @@ permalink: /404.html
     }
 
     h1 {
-      width: 800px;
-      position: relative;
-      left: -100px;
       letter-spacing: -1px;
       line-height: 60px;
       font-size: 60px;
       font-weight: 100;
-      margin: 0 0 50px 0;
       text-shadow: 0 1px 0 #fff
     }
 
     p {
-      color: rgba(0, 0, 0, .5);
+      color: #00000080;
       margin: 20px 0;
       line-height: 1.6
     }
@@ -91,64 +82,74 @@ permalink: /404.html
       margin-top: 35px
     }
 
-    #suggestion {
-      margin-top: 35px;
-      color: #ccc
-    }
-
     #suggestion a {
+      margin-top: 35px;
       color: #666666;
       font-weight: 200;
       font-size: 14px;
       margin: 0 10px
     }
-    */
 
+    body .dark-mode {
+      background-color: #151e29;
+    }
+    .dark-mode p, .dark-mode #suggestion a, .dark-mode h1 {
+      color: #fff
+    }
   </style>
+
 </head>
 
 <body>
-
-  <div class="main-wrapper ml-0">
-	  <section class="cta-section theme-bg-light">
-		  <div class="container text-center single-col-max-width py-5">
-
-        <h1 class="heading">404</h1>
-        <div class="intro">
-          <p><strong>File not found</strong></p>
-          <p>The site configured at this address does not contain the requested file.</p>
-          <div class="mb-4">
-            <a class="theme-link" href="https://montesariel.com">montesariel.com</a>
-          </div>
-          <a href="https://montesariel.com/">
-            <svg width="32" height="32" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-              <defs>
-                <linearGradient id="a" x1="60.1" x2="83.2" y1="55.2" y2="22.4" gradientTransform="translate(-40 -.8)" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#4155b1" offset="0" />
-                  <stop stop-color="#b4b9d2" offset="1" />
-                </linearGradient>
-                <linearGradient id="b" x1="8.4" x2="4.5" y1="2.3" y2="7.8" gradientTransform="matrix(4.5,0,0,4.5,9.2,9.2)" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#5469c9" offset="0" />
-                  <stop stop-color="#5469c9" stop-opacity="0" offset="1" />
-                </linearGradient>
-              </defs>
-              <g transform="matrix(3.4245 0 0 3.4247 -31.642 -31.67)">
-                <path d="m11.624 46.4 16.853-33.727 5.7463 12.747 2.2676-3.0616 9.2333 24.043z" fill="#fff" stroke="url(#a)" stroke-width="2.94" />
-                <path d="m9.2401 47.874 19.189-27.927 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="#5469c9" />
-                <path d="m21.037 47.873 6.616-17.447-0.89905-0.70537 2.1006-2.2307-1.8462 0.44723 2.251-2.4795-0.83031-5.5103 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="url(#b)" style="mix-blend-mode:screen" />
-              </g>
-            </svg>
-          </a>
-        </div><!--//intro-->
-
-      </div><!--//container-->
-    </section>
-  </div><!--//main-wrapper-->
+  <div class="container">
+    <h1>404</h1>
+    <p><strong>File not found</strong></p>
+    <p>
+      The site configured at this address does not
+      contain the requested file.
+    </p>
+    <div id="suggestion">
+      <a href="https://montesariel.com">montesariel.com</a>
+    </div>
+    <a href="https://montesariel.com/" class="logo">
+      <svg width="32" height="32" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <defs>
+          <linearGradient id="a" x1="60.1" x2="83.2" y1="55.2" y2="22.4" gradientTransform="translate(-40 -.8)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#4155b1" offset="0" />
+            <stop stop-color="#b4b9d2" offset="1" />
+          </linearGradient>
+          <linearGradient id="b" x1="8.4" x2="4.5" y1="2.3" y2="7.8" gradientTransform="matrix(4.5,0,0,4.5,9.2,9.2)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#5469c9" offset="0" />
+            <stop stop-color="#5469c9" stop-opacity="0" offset="1" />
+          </linearGradient>
+        </defs>
+        <g transform="matrix(3.4245 0 0 3.4247 -31.642 -31.67)">
+          <path d="m11.624 46.4 16.853-33.727 5.7463 12.747 2.2676-3.0616 9.2333 24.043z" fill="#fff" stroke="url(#a)" stroke-width="2.94" />
+          <path d="m9.2401 47.874 19.189-27.927 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="#5469c9" />
+          <path d="m21.037 47.873 6.616-17.447-0.89905-0.70537 2.1006-2.2307-1.8462 0.44723 2.251-2.4795-0.83031-5.5103 5.277 11.346 2.1958-3.019 11.969 19.602z" fill="url(#b)" style="mix-blend-mode:screen" />
+        </g>
+      </svg>
+    </a><!--//logo-->
+  </div><!--//container-->
 
   <!-- Dark Mode -->
 	<script src="assets/plugins/js-cookie.min.js"></script>
-  <script src="assets/js/dark-mode.js"></script>
-
+  <script>
+    $(document).ready(function() {
+      function setThemeFromCookie() {
+        // Check if the cookie is set 
+        if (typeof Cookies.get('mode') !== "undefined" ) {
+          $('body').addClass("dark-mode");
+          console.log('Cookie: dark mode' );
+        } else {
+          $('body').removeClass("dark-mode");
+          console.log('Cookie: light mode' );
+        }
+      }
+      setThemeFromCookie();
+    });	
+  </script>
+  
 </body>
 
 </html>
