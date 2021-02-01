@@ -7,13 +7,15 @@
 <linearGradient id="B" x1="47.193" x2="29.665" y1="19.978" y2="44.49" gradientUnits="userSpaceOnUse">
 <stop stop-color="#5469c9" offset="0"/>
 <stop stop-color="#5469c9" stop-opacity="0" offset="1"/>
-</linearGradient><linearGradient id="C" x1="20.147" x2="43.275" y1="54.358" y2="21.642"  xlink:href="#A"/>
-<linearGradient id="D" x1="68.501" x2="74.465" y1="59.82" y2="13.674"  xlink:href="#A"/>
+</linearGradient>
+<linearGradient id="C" x1="20.147" x2="43.275" y1="54.358" y2="21.642" href="#A"/>
+<linearGradient id="D" x1="68.501" x2="74.465" y1="59.82" y2="13.674" href="#A"/>
 <radialGradient id="E" cx="7.307" cy="5.198" r="11.597" gradientTransform="matrix(-9.1 0 0 -4.4 153 38)" gradientUnits="userSpaceOnUse">
-<stop stop-color="#fff" offset="0"/><stop offset="1"/>
+<stop stop-color="#fff" offset="0"/>
+<stop offset="1"/>
 </radialGradient>
 </defs>
-<a xlink:href="#F" transform="scale(1.7)">
+<a href="#F" transform="scale(1.7)">
 <rect x="1.597" y="1.597" width="102.64" height="54.348" rx="2.868" ry="2.866" fill="#4d4d4d"/>
 <g>
 <set attributeName="opacity" to="0" dur="2s"/>
@@ -42,4 +44,4 @@
 </g>
 <rect x="1.597" y="1.597" width="102.64" height="54.348" rx="2.868" ry="2.866" fill="none" stroke="url(#E)" stroke-dashoffset="259.48" stroke-linejoin="round" stroke-width="3.19"/>
 </a>
-    </svg>
+</svg>
