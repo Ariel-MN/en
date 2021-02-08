@@ -220,6 +220,9 @@
 
 				    <ul class="mb-5">
 						<li class="mb-2">
+							Python virtual environments do not include <strong>dll</strong> files and at least one of these files is a dependency for the Apache configuration. It is possible to manually copy the required dll file into the <code>project-root\venv\Scripts</code> folder from the Python installation folder which is usually located at <code>%username%\AppData\Local\Programs\Python\Python38</code>. The main file to copy is <strong>python39.dll</strong> and optionally all the other dll that are next to it and all the contents of the <code>Programs\Python\Python38\DLLs</code> folder.
+						</li>
+						<li class="mb-2">
 							Edit the <strong>host</strong> file at <code>C:\Windows\System32\drivers\etc</code> by adding this line to the bottom <pre><code>127.0.0.2    www.app-name.com    app-name.com</code></pre>
 						</li>
 						<li class="mb-2">

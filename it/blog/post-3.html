@@ -220,6 +220,9 @@
 
 				    <ul class="mb-5">
 						<li class="mb-2">
+							Gli ambienti virtuali Python non includono i file <strong>dll</strong> e almeno uno di questi file è una dipendenza per la configurazione di Apache. È possibile copiare manualmente il file dll richiesto nella cartella <code>project-root\venv\Scripts</code> dalla cartella di installazione di Python che di solito si trova in <code>%username%\AppData\Local\Programs\Python\Python38</code>. Il file principale da copiare è <strong>python39.dll</strong> e facoltativamente tutte le altre dll che si trovano accanto ad esso e tutti i contenuti della cartella <code>Programs\Python\Python38\DLLs</code>.
+						</li>
+						<li class="mb-2">
 							Modifica il file <strong>host</strong> in <code>C:\Windows\System32\drivers\etc</code> aggiungendo questa linea in fondo <pre><code>127.0.0.2    www.app-name.com    app-name.com</code></pre>
 						</li>
 						<li class="mb-2">
