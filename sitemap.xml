@@ -62,6 +62,11 @@
   <lastmod>2020-09-16T10:44:00+00:00</lastmod>
   <priority>0.75</priority>
 </url>
+<url>
+  <loc>https://montesariel.com/blog/post-4</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
 
 <!-- Spanish -->
 <url>
@@ -119,6 +124,11 @@
   <lastmod>2020-09-16T10:44:00+00:00</lastmod>
   <priority>0.75</priority>
 </url>
+<url>
+  <loc>https://montesariel.com/es/blog/post-4</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
 
 <!-- Italian -->
 <url>
@@ -173,6 +183,11 @@
 </url>
 <url>
   <loc>https://montesariel.com/it/blog/post-3</loc>
+  <lastmod>2020-09-16T10:44:00+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://montesariel.com/it/blog/post-4</loc>
   <lastmod>2020-09-16T10:44:00+00:00</lastmod>
   <priority>0.75</priority>
 </url>
